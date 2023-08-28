@@ -18,7 +18,7 @@ const useFetch = (url: string) => {
     };
 
     loadData().catch((error) => {
-      console.error("Error loading users:", error);
+      console.error("Error loading data:", error);
     });
   }, [url]);
 
