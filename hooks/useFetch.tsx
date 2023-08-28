@@ -4,7 +4,7 @@ const useFetch = (url: string) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const loadUsers = async () => {
+    const loadData = async () => {
       try {
         const response = await fetch(url);
         if (!response.ok) {
@@ -17,7 +17,7 @@ const useFetch = (url: string) => {
       }
     };
 
-    loadUsers().catch((error) => {
+    loadData().catch((error) => {
       console.error("Error loading users:", error);
     });
   }, [url]);
